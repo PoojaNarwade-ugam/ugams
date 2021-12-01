@@ -1,0 +1,15 @@
+
+
+<sly data-sly-use.timeline="com.Ugams.core.models.Timeline"></sly>
+<section class="timeline pb-120 ">
+<ul data-sly-list.items="${timeline.timelineDetails}">
+			    <li>
+			      <div class="content">
+			        <h4>
+			          <time>${items.title}</time>
+			        </h4>
+			        <p>${items.text1}</p>
+			        <p>${items.text2}</p>
+			      </div>
+			    </li>
+</section>
