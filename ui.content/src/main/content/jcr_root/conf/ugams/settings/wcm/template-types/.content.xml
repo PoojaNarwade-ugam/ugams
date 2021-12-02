@@ -5,4 +5,7 @@
     <xf/>
     <rep:policy/>
     <page/>
+    <custom/>
+    <empty-page/>
+    <custom-xf/>
 </jcr:root>
