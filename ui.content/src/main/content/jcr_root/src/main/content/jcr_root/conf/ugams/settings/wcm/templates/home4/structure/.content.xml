@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2021-06-22T15:36:28.638+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/ugams/settings/wcm/templates/home4"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="ugams/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ugams/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:created="{Date}2021-06-22T15:32:49.668+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-22T15:32:49.668+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ugams/components/content/header">
+                <navigation
+                    jcr:lastModified="{Date}2021-06-22T15:36:15.424+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/navigation"
+                    collectAllPages="true"
+                    disableShadowing="false"
+                    navigationRoot="/content/ugams/in/en"
+                    structureStart="1"/>
+                <logo
+                    jcr:lastModified="{Date}2021-06-22T15:36:28.632+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/image"
+                    altValueFromDAM="true"
+                    displayPopupTitle="true"
+                    fileReference="/content/dam/ugams/logo.png"
+                    isDecorative="false"
+                    titleValueFromDAM="true"/>
+            </header>
+            <responsivegrid
+                jcr:created="{Date}2021-06-22T15:32:58.957+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-22T15:32:58.957+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <footer
+                jcr:created="{Date}2021-06-22T15:33:37.124+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-22T15:34:27.282+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ugams/components/content/footer"
+                text1="We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience."
+                text2="Stay updated with our latest trends"
+                text3="Let us be social"
+                title1="About Me"
+                title2="Newsletter"
+                title3="Follow Me"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

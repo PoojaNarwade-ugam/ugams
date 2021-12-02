@@ -4484,3 +4484,11 @@ dl.accordion.time-line:before {
 }
 
 /*-------- end footer Area -------------*/
+
+.cmp-bgyellow{
+background-color: yellow; 
+}
+
+.cmp-bggreen{          
+background-color: green; 
+}

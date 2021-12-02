@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Page">
+    <templates/>
+    <policies
+        jcr:created="{Date}2021-06-07T18:58:01.024+05:30"
+        jcr:createdBy="admin"
+        jcr:mixinTypes="[rep:AccessControllable]"
+        jcr:primaryType="nt:unstructured">
+        <rep:policy/>
+        <ugams jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <form jcr:primaryType="nt:unstructured">
+                    <container jcr:primaryType="nt:unstructured">
+                        <form-container
+                            jcr:description="Allows the form components to be dropped into this form container."
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Content Form"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/ugams/components/form/button,/apps/ugams/components/form/hidden,/apps/ugams/components/form/options,/apps/ugams/components/form/text]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </form-container>
+                    </container>
+                </form>
+                <languagenavigation jcr:primaryType="nt:unstructured">
+                    <policy_xfm
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Ugams Language Navigation - Experience Fragment"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        navigationRoot="/content/ugams"
+                        structureDepth="1">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_xfm>
+                </languagenavigation>
+                <image jcr:primaryType="nt:unstructured">
+                    <policy_651483963895698
+                        jcr:description="- Enable lazy loading for faster page loading.&#xd;&#xa;- Define allowed image widths for automatic loading of the image in the most optimal resolution, given the size at which each image is displayed on the page, and the visitor's pixel density.&#xd;&#xa;- Disallow direct asset upload, to force authors to first upload the images to Assets."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Image"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
+                        allowUpload="false"
+                        altValueFromDAM="true"
+                        disableLazyLoading="false"
+                        displayPopupTitle="true"
+                        isDecorative="false"
+                        jpegQuality="{Long}85"
+                        titleValueFromDAM="true"
+                        uuidDisabled="true">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <plugins jcr:primaryType="nt:unstructured">
+                            <crop
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <aspectRatios jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Wide Landscape"
+                                        ratio="0.6180"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Landscape"
+                                        ratio="0.8284"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Square"
+                                        ratio="1"/>
+                                    <item3
+                                        jcr:primaryType="nt:unstructured"
+                                        name="Portrait"
+                                        ratio="1.6180"/>
+                                </aspectRatios>
+                            </crop>
+                            <rotate
+                                jcr:primaryType="nt:unstructured"
+                                features="right"/>
+                            <flip
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </plugins>
+                    </policy_651483963895698>
+                </image>
+                <text jcr:primaryType="nt:unstructured">
+                    <policy_641562756958017
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Text"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <paraformat
+                                jcr:primaryType="nt:unstructured"
+                                features="*">
+                                <formats
+                                    jcr:primaryType="nt:unstructured"
+                                    override="true">
+                                    <item0
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Paragraph"
+                                        tag="p"/>
+                                    <item1
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Quote"
+                                        tag="blockquote"/>
+                                    <item2
+                                        jcr:primaryType="nt:unstructured"
+                                        description="Preformatted"
+                                        tag="pre"/>
+                                </formats>
+                            </paraformat>
+                            <misctools
+                                jcr:primaryType="nt:unstructured"
+                                features="-">
+                                <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                    <chars
+                                        jcr:primaryType="nt:unstructured"
+                                        override="true">
+                                        <item0
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;copy;"
+                                            name="copyright"/>
+                                        <item1
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;euro;"
+                                            name="euro"/>
+                                        <item2
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;reg;"
+                                            name="registered"/>
+                                        <item3
+                                            jcr:primaryType="nt:unstructured"
+                                            entity="&amp;trade;"
+                                            name="trademark"/>
+                                    </chars>
+                                </specialCharsConfig>
+                            </misctools>
+                            <edit
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <findreplace
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <undo
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <spellcheck
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <table
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink"/>
+                            <subsuperscript
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                        </rtePlugins>
+                    </policy_641562756958017>
+                </text>
+                <title jcr:primaryType="nt:unstructured">
+                    <policy_641475696923109
+                        jcr:description="Allows only H1 and disallows links for the main page title."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Title"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="h1"
+                        linkDisabled="true"
+                        type="h1">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_641475696923109>
+                    <policy_641528232375303
+                        jcr:description="Allows all sizes, but not H1, which is reserved for the main page title."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Title"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowedTypes="[h2,h3,h4,h5,h6]"
+                        linkDisabled="false"
+                        type="h2">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_641528232375303>
+                </title>
+                <experiencefragment jcr:primaryType="nt:unstructured">
+                    <policy_header
+                        cq:styleDefaultElement="header"
+                        jcr:description="Sets a &lt;header> element on the page header experience fragment."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Header"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_header>
+                    <policy_footer
+                        cq:styleDefaultElement="footer"
+                        jcr:description="Sets a &lt;footer> element on the page footer experience fragment."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Footer"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_footer>
+                </experiencefragment>
+                <container jcr:primaryType="nt:unstructured">
+                    <policy_1574694950110
+                        jcr:lastModified="{Date}2021-06-22T15:32:43.015+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Test"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:Ugams - Content,/apps/ugams/components/form/container,group:Ugams - Structure]"
+                        layoutDisabled="false">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1575024218483
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="ugams/components/image"/>
+                                <mapping_1575030843388
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="ugams/components/experiencefragment"/>
+                                <mapping_1575030853128
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                    droptarget="contentfragment"
+                                    resourceType="ugams/components/contentfragment"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_1574694950110>
+                    <policy_1574695586800
+                        jcr:description="Allows the page components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:lastModified="{Date}2021-06-15T18:46:15.085+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Content"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:Ugams - Content,/apps/ugams/components/form/container]"
+                        layoutDisabled="false">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1575030255082
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="ugams/components/image"/>
+                                <mapping_1575030260142
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="ugams/components/experiencefragment"/>
+                                <mapping_1575030269139
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                    droptarget="contentfragment"
+                                    resourceType="ugams/components/contentfragment"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_1574695586800>
+                    <policy_649128221558427
+                        cq:styleDefaultElement="main"
+                        jcr:description="Sets a &lt;main> element on the page content area."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Page Main"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_649128221558427>
+                    <policy_1575040440977
+                        jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
+                        jcr:lastModified="{Date}2021-06-21T13:07:45.910+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="XF Root"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,group:Ugams - Content,/apps/ugams/components/form/container]"
+                        layoutDisabled="false">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                <mapping_1575024218483
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="image/*"
+                                    droptarget="image"
+                                    resourceType="ugams/components/image"/>
+                                <mapping_1575030843388
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="content"
+                                    assetMimetype="text/html"
+                                    droptarget="experiencefragment"
+                                    resourceType="ugams/components/experiencefragment"/>
+                                <mapping_1575030853128
+                                    jcr:primaryType="nt:unstructured"
+                                    assetGroup="media"
+                                    assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                    droptarget="contentfragment"
+                                    resourceType="ugams/components/contentfragment"/>
+                            </assetToComponentMapping>
+                        </cq:authoring>
+                    </policy_1575040440977>
+                </container>
+                <teaser jcr:primaryType="nt:unstructured">
+                    <policy_1575031387650
+                        jcr:description="Sets the title size to H3."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Teaser"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        titleType="h3">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1575031387650>
+                </teaser>
+                <download jcr:primaryType="nt:unstructured">
+                    <policy_1575032193319
+                        jcr:description="Sets the title size to H3."
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Download"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        allowUpload="false"
+                        displayFilename="true"
+                        displayFormat="true"
+                        displaySize="true"
+                        titleType="h3">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1575032193319>
+                </download>
+                <page jcr:primaryType="nt:unstructured">
+                    <policy
+                        jcr:description="Includes the required client libraries."
+                        jcr:lastModified="{Date}2021-06-16T10:30:49.284+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Generic Page"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="ugams.page">
+                        <jcr:content
+                            cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                            cq:lastReplicatedBy="admin"
+                            cq:lastReplicationAction="Activate"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            jcr:primaryType="nt:unstructured"/>
+                    </policy>
+                    <policy_1624278347648
+                        jcr:lastModified="{Date}2021-06-21T18:55:42.307+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Test"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="ugams.page">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1624278347648>
+                    <policy_1624287141667
+                        jcr:lastModified="{Date}2021-06-21T20:22:51.882+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="home2"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="ugams.page">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1624287141667>
+                </page>
+                <xfpage jcr:primaryType="nt:unstructured">
+                    <policy_1624262311950
+                        jcr:lastModified="{Date}2021-06-21T13:29:32.544+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Ugam xf"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="ugams.page">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1624262311950>
+                    <policy_1624263888998
+                        jcr:lastModified="{Date}2021-06-21T13:54:58.051+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="demo"
+                        sling:resourceType="wcm/core/components/policy/policy">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1624263888998>
+                    <policy_1624340495314
+                        jcr:lastModified="{Date}2021-06-22T11:11:43.624+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="xf"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        clientlibs="ugams.page">
+                        <jcr:content jcr:primaryType="nt:unstructured"/>
+                    </policy_1624340495314>
+                </xfpage>
+            </components>
+        </ugams>
+        <apps jcr:primaryType="nt:unstructured">
+            <ugams jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <structure jcr:primaryType="nt:unstructured">
+                        <page jcr:primaryType="nt:unstructured">
+                            <policy_1623257627685
+                                jcr:lastModified="{Date}2021-06-09T22:36:34.171+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Copy of "
+                                sling:resourceType="wcm/core/components/policy/policy"
+                                clientlibs="ugams.page">
+                                <jcr:content jcr:primaryType="nt:unstructured"/>
+                            </policy_1623257627685>
+                        </page>
+                    </structure>
+                    <navigation jcr:primaryType="nt:unstructured">
+                        <policy_1623955222211
+                            jcr:lastModified="{Date}2021-06-18T17:27:43.907+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="header"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            collectAllPages="true"
+                            disableShadowing="false"
+                            navigationRoot="/content/ugams/us/en"
+                            structureStart="1">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_1623955222211>
+                        <policy_36004001784500
+                            jcr:lastModified="{Date}2021-06-21T20:26:28.159+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="HeaderXf"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            collectAllPages="true"
+                            disableShadowing="false"
+                            navigationRoot="/content/ugams/in/en"
+                            structureStart="1">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_36004001784500>
+                    </navigation>
+                    <image jcr:primaryType="nt:unstructured"/>
+                </components>
+            </ugams>
+        </apps>
+        <libs jcr:primaryType="nt:unstructured">
+            <wcm jcr:primaryType="nt:unstructured">
+                <foundation jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <responsivegrid jcr:primaryType="nt:unstructured">
+                            <policy_1623311469346
+                                jcr:lastModified="{Date}2021-06-10T13:21:51.585+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Ugams"
+                                sling:resourceType="wcm/core/components/policy/policy"
+                                components="[group:Ugams - Content,/apps/ugams/components/form/container,group:Ugams - Structure]">
+                                <jcr:content jcr:primaryType="nt:unstructured"/>
+                                <cq:authoring jcr:primaryType="nt:unstructured">
+                                    <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                        <mapping_1575024218483
+                                            jcr:primaryType="nt:unstructured"
+                                            assetGroup="media"
+                                            assetMimetype="image/*"
+                                            droptarget="image"
+                                            resourceType="ugams/components/image"/>
+                                        <mapping_1575030843388
+                                            jcr:primaryType="nt:unstructured"
+                                            assetGroup="content"
+                                            assetMimetype="text/html"
+                                            droptarget="experiencefragment"
+                                            resourceType="ugams/components/experiencefragment"/>
+                                        <mapping_1575030853128
+                                            jcr:primaryType="nt:unstructured"
+                                            assetGroup="media"
+                                            assetMimetype="[text/html,application/vnd.adobe.contentfragment]"
+                                            droptarget="contentfragment"
+                                            resourceType="ugams/components/contentfragment"/>
+                                    </assetToComponentMapping>
+                                </cq:authoring>
+                            </policy_1623311469346>
+                            <policy_29251286319000
+                                jcr:lastModified="{Date}2021-06-15T18:38:31.351+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="demo"
+                                sling:resourceType="wcm/core/components/policy/policy"
+                                components="[/libs/wcm/foundation/components/responsivegrid,group:Ugams - Content,group:Ugams - Form,group:Ugams - Structure]">
+                                <jcr:content jcr:primaryType="nt:unstructured"/>
+                            </policy_29251286319000>
+                        </responsivegrid>
+                    </components>
+                </foundation>
+            </wcm>
+        </libs>
+        <wcm jcr:primaryType="nt:unstructured">
+            <foundation jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <responsivegrid jcr:primaryType="nt:unstructured">
+                        <policy_29365518172000
+                            jcr:lastModified="{Date}2021-06-15T18:41:58.229+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Banner-area"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/libs/wcm/foundation/components/responsivegrid,/apps/ugams/components/content/banner-area]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_29365518172000>
+                        <policy_29756729705800
+                            jcr:lastModified="{Date}2021-06-15T18:47:06.419+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="banner-area"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/libs/wcm/foundation/components/responsivegrid,/apps/ugams/components/content/banner-area]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_29756729705800>
+                        <policy_30238281963000
+                            jcr:lastModified="{Date}2021-06-18T17:33:38.494+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="testimonial"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:Ugams - Content]">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_30238281963000>
+                        <policy_30294210096800
+                            jcr:lastModified="{Date}2021-06-15T18:57:10.171+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="home-about"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/libs/wcm/foundation/components/responsivegrid,/apps/ugams/components/content/home-about]">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_30294210096800>
+                        <policy_30455482646500
+                            jcr:lastModified="{Date}2021-06-15T20:50:48.241+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="title-text"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:Ugams - Content]">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_30455482646500>
+                        <policy_30529054486700
+                            jcr:lastModified="{Date}2021-06-15T20:49:08.239+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="services"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:Ugams - Content]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_30529054486700>
+                        <policy_30651652421400
+                            jcr:lastModified="{Date}2021-06-16T15:06:39.131+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="service"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/ugams/components/content/blog-teaser,/apps/ugams/components/content/portfolio-teaser,/apps/ugams/components/content/services]">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_30651652421400>
+                        <policy_31020387168300
+                            jcr:lastModified="{Date}2021-06-15T20:49:28.538+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="fact"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:Ugams - Content]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_31020387168300>
+                        <policy_33198331222000
+                            jcr:lastModified="{Date}2021-06-15T20:49:57.757+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="portfolio"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:Ugams - Content]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_33198331222000>
+                        <policy_33513291446500
+                            jcr:lastModified="{Date}2021-06-16T13:43:17.567+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="price"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/ugams/components/content/price]">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_33513291446500>
+                        <policy_38568762070500
+                            jcr:lastModified="{Date}2021-06-15T21:20:43.190+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Blog Teaser"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="group:Ugams - Content">
+                            <jcr:content
+                                cq:lastReplicated="{Date}2021-07-01T23:08:32.242+05:30"
+                                cq:lastReplicatedBy="admin"
+                                cq:lastReplicationAction="Activate"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                jcr:primaryType="nt:unstructured"/>
+                        </policy_38568762070500>
+                        <policy_39055318054500
+                            jcr:lastModified="{Date}2021-06-15T21:21:52.688+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="brands"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="group:Ugams - Content">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_39055318054500>
+                        <policy_36624267906500
+                            jcr:lastModified="{Date}2021-06-21T20:36:58.018+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Horizontal1"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="group:Ugams - Content">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_36624267906500>
+                        <policy_1738018341300
+                            jcr:lastModified="{Date}2021-06-22T15:33:25.337+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="ugam1"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="group:Ugams - Content">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_1738018341300>
+                    </responsivegrid>
+                </components>
+            </foundation>
+        </wcm>
+    </policies>
+    <segments/>
+    <template-types/>
+</jcr:root>

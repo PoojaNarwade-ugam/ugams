@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-06-22T15:55:32.387+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/ugams/settings/wcm/templates/home-2"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="About"
+        sling:resourceType="ugams/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ugams/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ugams/components/container"
+                layout="responsiveGrid"/>
+            <responsivegrid_1969571114
+                jcr:created="{Date}2021-06-21T20:23:35.403+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-21T20:30:31.892+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <responsivegrid
+                jcr:created="{Date}2021-06-21T20:31:55.242+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-21T20:37:02.773+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <banner_navigation
+                    jcr:created="{Date}2021-06-21T20:54:08.793+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T20:54:32.457+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/banner-navigation"
+                    nav1="Home"
+                    nav1Path="/content/ugams/in/en/about"/>
+                <home_about
+                    jcr:created="{Date}2021-06-21T20:55:50.596+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T20:56:39.034+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/home-about"
+                    buttonTitle="VIEW FULL DETAILS"
+                    desc="Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+                    heading="PERSONAL DETAILS"
+                    img="/content/dam/ugams/about-img.png"
+                    path="/content/ugams/in/en/about"
+                    title=" ABOUT ME"/>
+                <title_text
+                    jcr:created="{Date}2021-06-21T20:56:53.522+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T20:57:14.074+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/title-text"
+                    bottomPadding="false"
+                    sectionGap="true"
+                    text="Who are in extremely love with eco friendly system."
+                    title="My Qualifications"/>
+                <timeline
+                    jcr:created="{Date}2021-06-21T20:57:23.368+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T20:57:56.411+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/timeline">
+                    <timeline jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            text1="Session: 2010-11"
+                            text2="Result: 3.78 (In the Scale of 4.00)"
+                            title="Masters in Graphics &amp; Fine Arts"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            text1="July 2015 to Present"
+                            title="Creative Content Developer"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            text1="Session: 2006-09"
+                            text2="Result: 3.40 (In the Scale of 4.00)"
+                            title="Bachelor in Graphics &amp; UI/UX"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            text1="July 2015 to Present"
+                            title="Senior UI/UX Designer"/>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            text1="Session: 2003-06"
+                            text2="Result: 4.94 (In the Scale of 5.00)"
+                            title="Diploma in Fine Arts &amp; Printing"/>
+                    </timeline>
+                </timeline>
+                <experiencefragment
+                    jcr:created="{Date}2021-06-21T20:58:11.190+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:55:32.382+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/testimonial-xf0/master"/>
+                <brands
+                    jcr:created="{Date}2021-06-21T20:58:52.297+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T22:56:21.780+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/brands"
+                    imgPath="[/content/dam/ugams/l1.png,/content/dam/ugams/l2.png,/content/dam/ugams/l3.png,/content/dam/ugams/l4.png,/content/dam/ugams/l5.png]"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>
