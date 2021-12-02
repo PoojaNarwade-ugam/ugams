@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ugams" mode="merge"/>
+    <filter root="/content/ugams" mode="merge"/>
+    <filter root="/content/dam/ugams" mode="merge"/>
+    <filter root="/content/experience-fragments/ugams" mode="merge"/>
+</workspaceFilter>

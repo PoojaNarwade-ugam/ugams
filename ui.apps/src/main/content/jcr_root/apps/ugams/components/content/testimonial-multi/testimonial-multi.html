@@ -1,0 +1,23 @@
+<section class="section-gap p-0 ">
+                <div class="container" data-sly-use.testimonial="com.Ugams.core.models.TestimonialMulti">    
+
+                 <div class="row ">
+                        <div class="active-testimonial" data-sly-list.items="${testimonial.testimonialDetails}">
+                        <div class="single-testimonial item d-flex flex-row">
+                                <div class="thumb">
+                                    <img class="img-fluid" src="" alt="">
+                                </div>
+                                <div class="desc">                
+                                    <p>
+                                        ${items.desc}
+                                    </p>
+                                    <h4>${items.name}</h4>
+                                    <p>${items.desg}</p>
+                                </div>
+                            </div>
+                           </div>
+                    </div>
+                 </div>
+         </section>
+
+

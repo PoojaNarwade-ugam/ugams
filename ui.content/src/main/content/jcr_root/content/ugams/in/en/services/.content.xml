@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-06-21T21:09:38.480+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/ugams/settings/wcm/templates/home-2"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Services"
+        sling:resourceType="ugams/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ugams/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ugams/components/container"
+                layout="responsiveGrid"/>
+            <responsivegrid_1969571114
+                jcr:created="{Date}2021-06-21T20:23:35.403+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-21T20:30:31.892+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"/>
+            <responsivegrid
+                jcr:created="{Date}2021-06-21T20:31:55.242+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-21T20:37:02.773+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <banner_navigation
+                    jcr:created="{Date}2021-06-21T21:04:30.778+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T21:04:53.138+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/banner-navigation"
+                    nav1="Home"
+                    nav1Path="/content/ugams/in/en/home"/>
+                <experiencefragment
+                    jcr:created="{Date}2021-06-21T21:05:40.841+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T21:08:27.075+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/service-area-xf/master"/>
+                <fact_area
+                    jcr:created="{Date}2021-06-21T21:07:09.367+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T21:07:33.541+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/fact-area">
+                    <factareamultifield jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="2536"
+                            factText="Projects Completed"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="6784"
+                            factText="Happy Clients"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="2239"
+                            factText="Cups of Coffee"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="4354"
+                            factText="Real Professionals"/>
+                    </factareamultifield>
+                </fact_area>
+                <experiencefragment_1854669316
+                    jcr:created="{Date}2021-06-21T21:07:44.589+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T21:07:59.039+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/price-xf/master"/>
+                <experiencefragment_2134082609
+                    jcr:created="{Date}2021-06-21T21:09:26.369+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-21T21:09:38.478+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/testimonial-xf/master"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>

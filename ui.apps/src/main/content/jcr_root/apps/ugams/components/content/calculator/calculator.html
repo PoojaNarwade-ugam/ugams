@@ -1,0 +1,26 @@
+<script>
+function add(){
+var firstvalue = $('#firstvalue').val();
+var secondvalue = $('#secondvalue').val();
+$.ajax({
+url     : '/bin/servlet',
+method     : 'GET',
+data     : {firstvalue : firstvalue,secondvalue : secondvalue},
+success    : function(result){
+$('#result').text(result);
+},
+error : function(jqXHR, exception){
+console.log('Error occured!!');
+}
+});
+}
+</script>
+
+  <label for="firstvalue">First Number:</label><br>
+  <input type="number" id="firstvalue" name="firstvalue" placeholder="Enter a number"><br><br>
+  <label for="secondvalue">Second Number:</label><br>
+  <input type="number" id="secondvalue" name="secondvalue" placeholder="Enter a number"><br><br>
+  <input type="submit" value="Submit" onclick="add()">
+
+<br><br>
+<h3 id="result"></h3>

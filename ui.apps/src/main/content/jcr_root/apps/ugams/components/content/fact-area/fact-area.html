@@ -1,0 +1,13 @@
+<sly data-sly-use.factarea="com.Ugams.core.models.FactArea"></sly>
+<div class="pt-5 mt-5">
+<section class="facts-area section-gap" id="facts-area">
+				<div class="container">				
+					<div class="row" data-sly-list.items="${factarea.factAreaDetails}">
+						<div class="col-lg-3 col-md-6 single-fact" >
+							<h1 class="counter">${items.factNumber}</h1>
+							<p>${items.factText}</p>
+						</div>											
+					</div>
+				</div>	
+			</section>
+            </div>
