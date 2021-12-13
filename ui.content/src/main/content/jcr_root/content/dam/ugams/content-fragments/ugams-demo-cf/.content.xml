@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="e0c76a16-5925-4202-b6a0-4d04960225ce">
+    <jcr:content
+        cq:name="ugams-demo-cf"
+        cq:parentPath="/content/dam/ugams/content-fragments"
+        jcr:lastModified="{Date}2021-12-13T10:33:32.114+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        jcr:title="Ugams  Content Fragment"
+        contentFragment="{Boolean}true"
+        lastFragmentSave="{Date}2021-12-13T10:33:32.115+05:30">
+        <data
+            cq:model="/conf/ugams/settings/dam/cfm/models/ugams-cf-model"
+            jcr:primaryType="nt:unstructured">
+            <master
+                jcr:mixinTypes="[cq:Taggable]"
+                jcr:primaryType="nt:unstructured"
+                about="&lt;p>Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.&lt;i>&lt;/i>&lt;/p>&#xa;"
+                about_x0040_ContentType="text/html"
+                about_x0040_LastModified="{Date}2021-12-13T10:33:32.080+05:30"
+                author="{Boolean}true"
+                author_x0040_LastModified="{Date}2021-12-13T10:33:32.080+05:30"
+                date="{Date}2021-12-13T12:25:00.000+05:30"
+                date_x0040_LastModified="{Date}2021-12-13T10:33:32.082+05:30"
+                name="Philip Gilbert"
+                name_x0040_LastModified="{Date}2021-12-13T10:33:32.079+05:30"
+                services="Web development"
+                services_x0040_LastModified="{Date}2021-12-13T10:33:32.081+05:30"/>
+        </data>
+        <metadata
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
