@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2021-12-07T16:10:04.375+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="ugams workflow"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <process_1531216427
+                jcr:created="{Date}2021-12-07T15:24:08.091+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-12-07T16:10:04.371+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Approver1"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.Ugams.core.workflow.UgamsWorkflowStep"
+                    PROCESS_ARGS="Approver1:Pooja"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process_1531216427>
+            <createversionprocess
+                jcr:created="{Date}2021-12-07T10:38:57.201+05:30"
+                jcr:createdBy="admin"
+                jcr:description="A process to create a version for either a page or an asset."
+                jcr:lastModified="{Date}2021-12-07T10:39:24.415+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Create Version"
+                sling:resourceType="wcm/workflow/components/workflow/createversionprocess">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.wcm.workflow.process.CreateVersionProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </createversionprocess>
+            <participant
+                jcr:created="{Date}2021-12-07T10:39:41.659+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-12-07T10:45:12.447+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Participant"
+                sling:resourceType="cq/workflow/components/model/participant">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PARTICIPANT="User1"/>
+            </participant>
+            <process
+                jcr:created="{Date}2021-12-07T10:40:29.214+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-12-07T15:52:43.033+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Approver2"
+                sling:resourceType="cq/workflow/components/model/process">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.Ugams.core.workflow.UgamsWorkflowStep"
+                    PROCESS_ARGS="Approver2: Narwade"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </process>
+        </flow>
+    </jcr:content>
+</jcr:root>
