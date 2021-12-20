@@ -2,26 +2,29 @@ package com.Ugams.core.schedulers;
 
 
 import com.Ugams.core.config.SchedulerConfiguration;
+
+import com.Ugams.core.services.DemoService;
 import org.apache.sling.commons.scheduler.ScheduleOptions;
 import org.apache.sling.commons.scheduler.Scheduler;
-import org.osgi.service.component.annotations.Activate;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Deactivate;
-import org.osgi.service.component.annotations.Reference;
+
+
+import org.osgi.service.component.annotations.*;
 import org.osgi.service.metatype.annotations.Designate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Component(immediate = true, service = Runnable.class)
+
+
+
+@Component(immediate = true, service = UgamsScheduler.class)
 @Designate(ocd = SchedulerConfiguration.class)
 public class UgamsScheduler implements Runnable {
     private static final Logger LOG = LoggerFactory.getLogger(UgamsScheduler.class);
-
     private int schedulerId;
-
     @Reference
     private Scheduler scheduler;
-
+    @Reference
+    DemoService Date;
     @Activate
     protected void activate(SchedulerConfiguration config) {
         schedulerId = config.schedulerName().hashCode();
@@ -42,13 +45,12 @@ public class UgamsScheduler implements Runnable {
         scheduleOptions.name(String.valueOf(schedulerId));
         scheduleOptions.canRunConcurrently(true);
         scheduler.schedule(this, scheduleOptions);
-
         LOG.info("\n ---------Scheduler added----------");
-        ScheduleOptions scheduleOptionsNow = scheduler.NOW(1,5);
-        scheduler.schedule(this, scheduleOptionsNow);
+
     }
     @Override
     public void run() {
-         LOG.info("\n ====> RUN METHOD  ");
+        LOG.info("\n ====> RUN METHOD  ");
+        Date.addProperty();
     }
 }

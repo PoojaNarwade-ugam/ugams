@@ -20,5 +20,5 @@ public @interface SchedulerConfiguration {
             name = "Cron Expression",
             description = "Cron expression used by the scheduler",
             type = AttributeType.STRING)
-    public String cronExpression() default "0 0/1 * 1/1 * ? *"; // runs every 1 minute
+    public String cronExpression() default "0/20 * * * * ?"; // runs every 10 seconds
 }
