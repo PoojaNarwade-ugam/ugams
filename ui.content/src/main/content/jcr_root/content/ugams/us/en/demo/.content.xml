@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-12-20T23:38:48.010+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/ugams/settings/wcm/templates/custom"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Demo"
+        sling:resourceType="ugams/components/structure/page"
+        Time="{Date}2021-12-20T23:46:20.005Z">
+        <root
+            jcr:lastModified="{Date}2021-06-09T22:30:37.707+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="/libs/wcm/foundation/components/responsivegrid">
+            <democomp
+                jcr:created="{Date}2021-12-20T23:38:47.975+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-12-20T23:38:47.975+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ugams/components/content/democomp"
+                Time="{Date}2021-12-21T00:34:40.007Z"/>
+        </root>
+    </jcr:content>
+</jcr:root>
