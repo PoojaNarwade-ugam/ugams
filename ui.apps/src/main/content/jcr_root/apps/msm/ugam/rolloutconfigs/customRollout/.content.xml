@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:trigger="rollout"
+    jcr:description="Custom rollout configuration"
+    jcr:primaryType="cq:RolloutConfig"
+    jcr:title="Custom rollout config">
+    <targetVersion
+        jcr:primaryType="cq:LiveSyncAction"
+        Name="targetVersion"/>
+</jcr:root>

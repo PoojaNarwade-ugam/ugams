@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-06-22T15:58:57.014+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/ugams/settings/wcm/templates/home-2"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home"
+        sling:resourceType="ugams/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ugams/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="ugams/components/container"
+                layout="responsiveGrid"/>
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <banner_area
+                    jcr:created="{Date}2021-06-22T15:24:02.414+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:25:00.936+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/banner-area"
+                    buttonTitle="DISCOVER NOW"
+                    desc="You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures."
+                    heading="PHILIP GILBERT"
+                    img="/content/dam/ugams/hero-img.png"
+                    path="/content/ugams/in/en/home"
+                    title="THIS IS ME"/>
+                <home_about
+                    jcr:created="{Date}2021-06-22T15:25:09.690+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:25:52.134+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/home-about"
+                    buttonTitle="VIEW FULL DETAILS"
+                    desc="Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."
+                    heading="PERSONAL DETAILS"
+                    img="/content/dam/ugams/about-img.png"
+                    path="/content/ugams/in/en/about"
+                    title="ABOUT ME"/>
+                <experiencefragment
+                    jcr:created="{Date}2021-06-22T15:26:07.004+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:26:20.026+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/service-area-xf/master"/>
+                <fact_area
+                    jcr:created="{Date}2021-06-22T15:26:30.552+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:26:49.698+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/fact-area">
+                    <factareamultifield jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="2536"
+                            factText="Projects Completed"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="6784"
+                            factText="Happy Clients"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="2239"
+                            factText="Cups of Coffee"/>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            factNumber="4354"
+                            factText="Real Professionals"/>
+                    </factareamultifield>
+                </fact_area>
+                <experiencefragment_1156318154
+                    jcr:created="{Date}2021-06-22T15:27:00.747+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:27:14.317+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/portfolio-xf/master"/>
+                <experiencefragment_11364645
+                    jcr:created="{Date}2021-06-22T15:57:11.373+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:57:24.747+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/testimonial-xf0/master"/>
+                <experiencefragment_677391142
+                    jcr:created="{Date}2021-06-22T15:57:31.257+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:57:43.694+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/price-xf/master"/>
+                <experiencefragment_1376751288
+                    jcr:created="{Date}2021-06-22T15:57:50.712+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:58:03.604+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/experiencefragment"
+                    fragmentVariationPath="/content/experience-fragments/ugams/us/en/site/blog-xf/master"/>
+                <brands
+                    jcr:created="{Date}2021-06-22T15:58:11.977+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-06-22T15:58:57.006+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/brands"
+                    imgPath="[/content/dam/ugams/l1.png,/content/dam/ugams/l2.png,/content/dam/ugams/l3.png,/content/dam/ugams/l4.png,/content/dam/ugams/l5.png]"/>
+            </responsivegrid>
+        </root>
+    </jcr:content>
+    <rep:policy/>
+</jcr:root>

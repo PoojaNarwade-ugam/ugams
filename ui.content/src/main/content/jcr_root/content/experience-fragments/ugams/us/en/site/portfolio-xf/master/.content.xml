@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-12-10T16:02:09.610+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[]"
+        cq:template="/conf/ugams/settings/wcm/templates/custom-xf"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="portfolio-xf"
+        sling:resourceType="ugams/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="ugams/components/container"
+            layout="responsiveGrid">
+            <responsivegrid
+                jcr:created="{Date}2021-06-21T13:10:23.051+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-06-21T13:10:23.051+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="8"
+                        width="4"/>
+                </cq:responsive>
+            </responsivegrid>
+            <buildingblock
+                cq:masterBuildingBlockPath="/content/experience-fragments/ugams/us/en/site/blog-xf/master/jcr:content/root/blog_teaser"
+                jcr:created="{Date}2021-12-10T16:02:01.623+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-12-10T16:02:01.623+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/experience-fragments/editor/components/buildingblock">
+                <blog_teaser354753800720300
+                    jcr:lastModified="{Date}2021-12-09T20:05:32.412+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/blog-teaser"
+                    blogText="Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career."
+                    blogTitle="Break Through Self Doubt And Fear"
+                    img="/content/dam/ugams/b1.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </blog_teaser354753800720300>
+                <item354753801989300
+                    jcr:created="{Date}2021-12-09T20:05:49.118+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-12-09T20:06:18.076+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/blog-teaser"
+                    blogText="You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving."
+                    blogTitle="PORTABLE FASHION FOR YOUNG WOMEN"
+                    img="/content/dam/ugams/b2.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </item354753801989300>
+                <item354753804332300
+                    jcr:created="{Date}2021-12-09T20:06:27.423+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-12-09T20:07:02.606+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/blog-teaser"
+                    blogText="So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved."
+                    blogTitle="DO DREAMS SERVE AS A PREMONITION"
+                    img="/content/dam/ugams/b3.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </item354753804332300>
+            </buildingblock>
+            <buildingblock_1917749229
+                cq:masterBuildingBlockPath="/content/experience-fragments/ugams/us/en/site/blog-xf/master/jcr:content/root/blog_teaser"
+                jcr:created="{Date}2021-12-10T16:02:04.770+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-12-10T16:02:04.770+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/experience-fragments/editor/components/buildingblock">
+                <blog_teaser354753800720300
+                    jcr:lastModified="{Date}2021-12-09T20:05:32.412+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/blog-teaser"
+                    blogText="Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career."
+                    blogTitle="Break Through Self Doubt And Fear"
+                    img="/content/dam/ugams/b1.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </blog_teaser354753800720300>
+                <item354753801989300
+                    jcr:created="{Date}2021-12-09T20:05:49.118+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-12-09T20:06:18.076+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/blog-teaser"
+                    blogText="You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving."
+                    blogTitle="PORTABLE FASHION FOR YOUNG WOMEN"
+                    img="/content/dam/ugams/b2.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </item354753801989300>
+                <item354753804332300
+                    jcr:created="{Date}2021-12-09T20:06:27.423+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2021-12-09T20:07:02.606+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="ugams/components/content/blog-teaser"
+                    blogText="So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved."
+                    blogTitle="DO DREAMS SERVE AS A PREMONITION"
+                    img="/content/dam/ugams/b3.jpg">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="4"/>
+                    </cq:responsive>
+                </item354753804332300>
+            </buildingblock_1917749229>
+        </root>
+        <cq:metadata jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>
