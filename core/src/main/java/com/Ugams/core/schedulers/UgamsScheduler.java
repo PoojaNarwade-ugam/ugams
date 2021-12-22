@@ -2,7 +2,6 @@ package com.Ugams.core.schedulers;
 
 
 import com.Ugams.core.config.SchedulerConfiguration;
-
 import com.Ugams.core.services.DemoService;
 import org.apache.sling.commons.scheduler.ScheduleOptions;
 import org.apache.sling.commons.scheduler.Scheduler;
