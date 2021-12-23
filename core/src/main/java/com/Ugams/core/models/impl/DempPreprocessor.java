@@ -1,12 +1,16 @@
 package com.Ugams.core.models.impl;
 
+import com.Ugams.core.services.DemoService;
 import com.Ugams.core.utils.ResolverUtils;
 
 
+import com.adobe.reef.siren.builder.EntityBuilder;
 import com.day.cq.commons.date.DateUtil;
 import com.day.cq.commons.date.InvalidDateException;
 import com.day.cq.replication.*;
 import java.util.Calendar;
+import java.util.Date;
+
 import org.apache.sling.api.resource.*;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
@@ -14,17 +18,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
+import javax.jcr.Property;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
 
 @Component(immediate = true)
 
+
+
 public class DempPreprocessor implements Preprocessor {
     private static final Logger log = LoggerFactory.getLogger(DempPreprocessor.class);
 
     @Reference
     private ResourceResolverFactory resourceResolverFactory;
+    @Reference
+    DemoService currentTime;
 
 
     @Override
@@ -48,15 +57,17 @@ public class DempPreprocessor implements Preprocessor {
                 Resource resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/democomp");
                 Node node = resource.adaptTo(Node.class);
 
-
+                Property time = node.getProperty("Time");
                 //Calendar currentTime=DateUtil.parseISO8601(DateUtil.getISO8601Date(java.util.Calendar.getInstance()));
 
-                if (node.getProperty("Time") == DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance()))) {
+                if (time == DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance()))) {
                     log.debug("Entered if");
 
                 } else {
                     log.debug("Entered else");
                     node.setProperty("Time", DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())));
+
+                    currentTime.addProperty();
                     session.save();
                     session.logout();
                 }
