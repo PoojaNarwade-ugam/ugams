@@ -45,12 +45,7 @@ public class UgamsWorkflowStep implements WorkflowProcess{
                         node.setProperty(prop,value);
                     }
                 }
-
-            }
-        }catch (Exception e){
-
-        }
-    }
-}
+            }}catch (Exception e){}
+    }}
 
 

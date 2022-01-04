@@ -15,32 +15,24 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
+
 @Model(adaptables = SlingHttpServletRequest.class,
         adapters = Caconfig.class,
-        resourceType = {CaconfigImpl.RESOURCE_TYPE},
-        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
-)
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CaconfigImpl implements Caconfig {
     private static final Logger LOG = LoggerFactory.getLogger(CaconfigImpl.class);
-    protected static final String RESOURCE_TYPE = "";
     @SlingObject
     ResourceResolver resourceResolver;
     @ScriptVariable
     Page currentPage;
-    @OSGiService
-    ConfigurationResolver configurationResolver;
     private String siteCountry;
-    private String siteLocale;
     private String siteAdmin;
     private String siteSection;
+    private String siteLocale;
+
     @Override
     public String getSiteCountry() {
         return siteCountry;
-    }
-
-    @Override
-    public String getSiteLocale() {
-        return siteLocale;
     }
 
     @Override
@@ -52,31 +44,23 @@ public class CaconfigImpl implements Caconfig {
     public String getSiteSection() {
         return siteSection;
     }
-
+    @Override
+    public String getSiteLocale() {
+        return siteLocale;
+    }
 
     @PostConstruct
     public void postConstruct() {
         UgamsCaconfig caConfig = getContextAwareConfig(currentPage.getPath(), resourceResolver);
         siteCountry = caConfig.siteCountry();
-        siteLocale = caConfig.siteLocale();
         siteAdmin = caConfig.siteAdmin();
         siteSection = caConfig.siteSection();
+        siteLocale =caConfig.siteLocale();
     }
-
     public UgamsCaconfig getContextAwareConfig(String currentPage, ResourceResolver resourceResolver) {
         String currentPath = StringUtils.isNoneBlank(currentPage) ? currentPage : StringUtils.EMPTY;
         Resource contentResource = resourceResolver.getResource(currentPath);
         if (contentResource != null) {
             ConfigurationBuilder configurationBuilder = contentResource.adaptTo(ConfigurationBuilder.class);
             if (configurationBuilder != null) {
-                return configurationBuilder.as(UgamsCaconfig.class);
-            }
-        }
-
-        return null;
-    }
-
-
-
-
-}
+                return configurationBuilder.as(UgamsCaconfig.class);}}return null;}}

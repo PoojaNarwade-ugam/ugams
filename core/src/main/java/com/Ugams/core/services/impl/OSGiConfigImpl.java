@@ -28,11 +28,11 @@ public class OSGiConfigImpl implements OSGiConfig {
                 type = AttributeType.INTEGER)
         int getServiceCount() default 8;
     }
-    private String serviceName;
+     private String serviceName;
     private int serviceCount;
 
     @Activate
-    protected void activate(ServiceConfig serviceConfig){
+    public void activate(ServiceConfig serviceConfig){
         serviceName=serviceConfig.serviceName();
         serviceCount=serviceConfig.getServiceCount();
 

@@ -1,0 +1,15 @@
+{
+  "brands":{
+    "sling:resourceType": "ugams/components/content/brands",
+    "imgPath": [
+      "/content/dam/ugams/l1.png",
+      "/content/dam/ugams/l2.png",
+      "/content/dam/ugams/l3.png",
+      "/content/dam/ugams/l4.png",
+      "/content/dam/ugams/l5.png"
+    ]
+  },
+  "empty": {
+
+  }
+}

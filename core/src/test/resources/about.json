@@ -1,0 +1,16 @@
+{
+  "about":{
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "buttonTitle": "VIEW FULL DETAILS",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Fri Jun 18 2021 00:41:57 GMT+0530",
+    "img": "/content/dam/ugams/about-img.png",
+    "desc": "Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    "path": "/content/ugams/us/en/about",
+    "title": "ABOUT ME",
+    "heading": "PERSONAL DETAILS",
+    "jcr:lastModified": "Fri Jun 18 2021 13:14:58 GMT+0530",
+    "sling:resourceType": "ugams/components/content/home-about"
+  }
+}

@@ -19,9 +19,6 @@ public @interface UgamsCaconfig {
             description = "Site Section")
     String siteSection() default "Ugams-aem";
 
-
-
-
 }
 
 

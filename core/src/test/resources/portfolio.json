@@ -1,0 +1,14 @@
+{
+  "portfolio": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "preimg": "/content/dam/ugams/preview.png",
+    "portfolioText": "2D Vinyl Design",
+    "jcr:created": "Fri Jun 18 2021 00:51:27 GMT+0530",
+    "img": "/content/dam/ugams/p1.jpg",
+    "portfolioTitle": "Vector",
+    "jcr:lastModified": "Fri Jun 18 2021 16:23:12 GMT+0530",
+    "sling:resourceType": "ugams/components/content/portfolio-teaser"
+  }
+}

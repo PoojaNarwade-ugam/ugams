@@ -1,0 +1,14 @@
+
+{
+  "Blog":{
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "blogText": "Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.",
+    "jcr:created": "Fri Jun 18 2021 01:01:38 GMT+0530",
+    "img": "/content/dam/ugams/b1.jpg",
+    "jcr:lastModified": "Fri Jun 18 2021 13:21:35 GMT+0530",
+    "blogTitle": "Break Through Self Doubt And Fear",
+    "sling:resourceType": "ugams/components/content/blog-teaser"
+  }
+}

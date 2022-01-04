@@ -1,0 +1,16 @@
+{
+  "footer":{
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "title1": "About Me",
+    "title2": "Newsletter",
+    "title3": "Follow Me",
+    "jcr:created": "Fri Jun 18 2021 00:20:08 GMT+0530",
+    "text1": " We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience.",
+    "text2": "Stay updated with our latest trends",
+    "text3": "Let us be social",
+    "jcr:lastModified": "Fri Jun 18 2021 00:23:14 GMT+0530",
+    "sling:resourceType": "ugams/components/content/footer"
+  }
+}

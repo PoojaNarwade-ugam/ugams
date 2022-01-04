@@ -61,13 +61,8 @@ public class ServiceUserModelImpl implements ServiceUserModel {
             List<Hit> Hits = result.getHits();
             for (Hit hit : Hits) {
                 user = user + "\r\n" + hit.getProperties().get("rep:principalName", String.class);
-            }
-        } catch (RepositoryException e) {
-            LOG.info("Service User ERROR", e.getMessage());
-        } catch (LoginException e) {
-            e.printStackTrace();
-        }
+            }} catch (RepositoryException | LoginException e) {
+            LOG.info("Service User ERROR", e.getMessage());}
         return user;
     }
-
 }

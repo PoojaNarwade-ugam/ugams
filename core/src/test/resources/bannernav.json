@@ -1,0 +1,15 @@
+{
+  "bannernav":{
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Fri Jun 18 2021 01:08:50 GMT+0530",
+    "nav1": "Home",
+    "nav2": "Services",
+    "title": "Services",
+    "jcr:lastModified": "Fri Jun 18 2021 01:09:23 GMT+0530",
+    "sling:resourceType": "ugams/components/content/banner-navigation",
+    "nav1Path": "/content/ugams/us/en/home",
+    "nav2Path": "null"
+  }
+}
