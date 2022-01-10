@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dropdowncomp"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <country
+                                granite:id="country"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Country"
+                                name="./country">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="/apps/ugams/citylist"/>
+                            </country>
+                            <state
+                                granite:id="state"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="State"
+                                name="./state">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="/apps/state"/>
+                            </state>
+                            <list
+                                granite:id="list"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="List"
+                                name="./list">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <html
+                                        jcr:primaryType="nt:unstructured"
+                                        text="HTML"
+                                        value="html"/>
+                                    <css
+                                        jcr:primaryType="nt:unstructured"
+                                        text="CSS"
+                                        value="css"/>
+                                    <js
+                                        jcr:primaryType="nt:unstructured"
+                                        text="JS"
+                                        value="js"/>
+                                </items>
+                            </list>
+                            <type
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Type"
+                                name="./type">
+                                <datasource
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="/apps/dropdown"
+                                    dropdownSelector="typeList"/>
+                            </type>
+                        </items>
+                    </column>
+                    <clientlibs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                        js="ugams.dropdown"/>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

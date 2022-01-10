@@ -1,0 +1,49 @@
+{
+   "australia":[
+      {
+         "text":"Queensland",
+         "value":"queensland"
+      },
+      {
+         "text":"Victoria",
+         "value":"victoria"
+      },
+      {
+         "text":"Western Australia",
+         "value":"western australia"
+      },
+      {
+         "text":"Tasmania",
+         "value":"tasmania"
+      },
+      {
+         "text":"New South Wales",
+         "value":"new south wales"
+      }
+   ],
+
+   "india":[
+        {
+         "text":"Maharashtra",
+         "value":"maharashtra"
+      },
+      {
+         "text":"Gujarat",
+         "value":"gujarat"
+      },
+      {
+         "text":"Haryana",
+         "value":"haryana"
+      },
+      {
+         "text":"Rajasthan",
+         "value":"rajasthan"
+      },
+      {
+         "text":"Punjab",
+         "value":"punjab"
+      }
+
+   ]
+
+}
