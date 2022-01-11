@@ -24,11 +24,11 @@ import java.util.*;
         property = {
                 "sling.servlet.resourceTypes=" + "/apps/dropdown"
         })
-public class dropdownservlet extends SlingSafeMethodsServlet {
+public class Dropdownservlet extends SlingSafeMethodsServlet {
 
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
-        try {
+
             String path = "/content/ugams/us/en";
             ResourceResolver resourceResolver = request.getResourceResolver();
             List<KeyValue> dropDownList = new ArrayList<>();
@@ -44,13 +44,13 @@ public class dropdownservlet extends SlingSafeMethodsServlet {
                         String title = pagechild.getTitle();
                         dropDownList.add(new KeyValue(name, title));
                     });
-                    @SuppressWarnings("unchecked")
+
                     DataSource ds =
                             new SimpleDataSource(
-                                    new TransformIterator(
+                                    new TransformIterator<>(
                                             dropDownList.iterator(),
                                             input -> {
-                                                KeyValue keyValue = (KeyValue) input;
+                                                KeyValue keyValue =  input;
                                                 ValueMap vm = new ValueMapDecorator(new HashMap<>());
                                                 vm.put("value", keyValue.key);
                                                 vm.put("text", keyValue.value);
@@ -59,16 +59,15 @@ public class dropdownservlet extends SlingSafeMethodsServlet {
                                                         JcrConstants.NT_UNSTRUCTURED, vm);
                                             }));
                     request.setAttribute(DataSource.class.getName(), ds);
-                }
+
             }
-        } catch (Exception e) {
         }
     }
 
-    private class KeyValue {
+    private static class KeyValue {
 
-        private String key;
-        private String value;
+        private final String key;
+        private final String value;
 
         private KeyValue(final String newKey, final String newValue) {
             this.key = newKey;

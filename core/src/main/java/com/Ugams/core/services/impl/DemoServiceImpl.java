@@ -1,6 +1,4 @@
 package com.Ugams.core.services.impl;
-
-
 import com.Ugams.core.services.DemoService;
 import com.day.cq.commons.date.DateUtil;
 import com.Ugams.core.utils.ResolverUtils;
@@ -16,21 +14,23 @@ import java.util.Calendar;
 public class DemoServiceImpl implements DemoService {
     @Reference
     private ResourceResolverFactory resourceResolverFactory;
-    final Logger LOG = LoggerFactory.getLogger(DemoServiceImpl.class);
+    final Logger log = LoggerFactory.getLogger(DemoServiceImpl.class);
     @Override
     public void addProperty(String path){
         try{
 
-            ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
-            Session session = serviceResourceResolver.adaptTo(Session.class);
-            //String path = "/content/ugams/us/en/demo/jcr:content/root/democomp";
-            Resource resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/democomp");
+            Session session;
+            Resource resource;
+            try (ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory)) {
+                session = serviceResourceResolver.adaptTo(Session.class);
+                resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/democomp");
+            }
             Node node = resource.adaptTo(Node.class);
             node.setProperty("Time" , DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance())));
             session.save();
             session.logout();
         } catch (Exception e) {
-            LOG.info(e.getMessage());
+            log.info(e.getMessage());
         }
 
     }

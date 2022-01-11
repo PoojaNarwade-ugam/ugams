@@ -13,7 +13,7 @@ import java.io.IOException;
 @SlingServletPaths(
         value = {"/bin/add"}
 )
-public class additionservlet extends SlingAllMethodsServlet {
+public class AdditionServlet extends SlingAllMethodsServlet {
 
     @Override
     protected void doGet(final SlingHttpServletRequest req, final SlingHttpServletResponse resp) throws IOException {

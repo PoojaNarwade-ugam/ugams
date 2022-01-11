@@ -14,7 +14,7 @@ import javax.inject.Inject;
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class PriceImpl implements Price{
 
-    final protected static String RESOURCE_TYPE="ugams/components/content/price";
+     protected static final String RESOURCE_TYPE="ugams/components/content/price";
 
     @Inject
     String type;

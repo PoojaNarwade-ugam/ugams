@@ -25,7 +25,7 @@ public class UgamsScheduler implements Runnable {
     private Scheduler scheduler;
     String mypath="/content/ugams/us/en/demo/jcr:content/root/democomp";
     @Reference
-    DemoService Date;
+    DemoService date;
     @Activate
     protected void activate(SchedulerConfiguration config) {
         schedulerId = config.schedulerName().hashCode();
@@ -52,6 +52,6 @@ public class UgamsScheduler implements Runnable {
     @Override
     public void run() {
         LOG.info("\n ====> RUN METHOD  ");
-        Date.addProperty(mypath);
+        date.addProperty(mypath);
     }
 }

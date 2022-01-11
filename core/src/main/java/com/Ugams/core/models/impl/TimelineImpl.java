@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class TimelineImpl implements Timeline{
 
-    final protected static String RESOURCE_TYPE="ugams/components/content/timeline";
+    protected static final String RESOURCE_TYPE="ugams/components/content/timeline";
     @ChildResource
     Resource timeline;
     @Override

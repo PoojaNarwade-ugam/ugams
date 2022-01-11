@@ -5,22 +5,17 @@ import com.day.cq.wcm.api.Page;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.caconfig.ConfigurationBuilder;
-import org.apache.sling.caconfig.ConfigurationResolver;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.api.resource.*;
-import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.apache.sling.models.annotations.injectorspecific.ScriptVariable;
 import org.apache.sling.models.annotations.injectorspecific.SlingObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import javax.annotation.PostConstruct;
 
 @Model(adaptables = SlingHttpServletRequest.class,
         adapters = Caconfig.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CaconfigImpl implements Caconfig {
-    private static final Logger LOG = LoggerFactory.getLogger(CaconfigImpl.class);
     @SlingObject
     ResourceResolver resourceResolver;
     @ScriptVariable

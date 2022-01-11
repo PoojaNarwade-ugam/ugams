@@ -12,8 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
 import javax.jcr.Session;
-import java.util.Iterator;
-import java.util.Set;
+
 
 
 @Component(
@@ -35,7 +34,7 @@ public class UgamsWorkflowStep implements WorkflowProcess{
                 Session session = workflowSession.adaptTo(Session.class);
                 String path = workflowData.getPayload().toString() + "/jcr:content";
                 Node node = (Node) session.getItem(path);
-                String[] processArgs = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
+                String[] processArgs = processArguments.get("PROCESS_ARGS", "string").split(",");
 
                 for (String wfArgs : processArgs) {
                     String[] args = wfArgs.split(":");
@@ -45,7 +44,7 @@ public class UgamsWorkflowStep implements WorkflowProcess{
                         node.setProperty(prop,value);
                     }
                 }
-            }}catch (Exception e){}
+            }}catch (Exception e){log.info("\n End of execute method ");}
     }}
 
 

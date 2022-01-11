@@ -24,9 +24,7 @@ class OSGiConfigImplTest {
         osGiConfig.activate(config);
     }
 
-    @Test
-    void activate() {
-    }
+
 
     @Test
     void getServiceName() {

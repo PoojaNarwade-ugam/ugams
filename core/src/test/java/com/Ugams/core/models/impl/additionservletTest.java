@@ -22,10 +22,10 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith({AemContextExtension.class, MockitoExtension.class})
-class additionservletTest {
+class AdditionServletTest {
 
 
-    additionservlet additionservlet = new additionservlet();
+    AdditionServlet additionservlet = new AdditionServlet();
 
     @BeforeEach
     void setUp() {

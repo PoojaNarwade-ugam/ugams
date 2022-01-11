@@ -22,7 +22,6 @@ import org.slf4j.LoggerFactory;
 import javax.inject.Inject;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,12 +37,12 @@ public class ServiceUserModelImpl implements ServiceUserModel {
     @Inject
     private QueryBuilder queryBuilder;
     String user = " ";
-    final Logger LOG = LoggerFactory.getLogger(ServiceUserModelImpl.class);
+    final Logger log = LoggerFactory.getLogger(ServiceUserModelImpl.class);
     @Override
     public String getUsernames() {
 
-        LOG.info("\n Inside Getusername of service ");
-        List<String> usernames = new ArrayList<>();
+        log.info("\n Inside Getusername of service ");
+
         Map<String, String> userMap = new HashMap<>();
         userMap.put("p.hits", "selective");
         userMap.put("p.limit", "-1");
@@ -53,16 +52,18 @@ public class ServiceUserModelImpl implements ServiceUserModel {
         userMap.put("type", "rep:User");
         userMap.put("p.properties", "rep:principalName");
         try {
-            ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
-            Session session = serviceResourceResolver.adaptTo(Session.class);
-            LOG.info("\n Result " + session.getUserID());
+            Session session;
+            try (ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory)) {
+                session = serviceResourceResolver.adaptTo(Session.class);
+            }
             Query userQuery = queryBuilder.createQuery(PredicateGroup.create(userMap), session);
             SearchResult result = userQuery.getResult();
-            List<Hit> Hits = result.getHits();
-            for (Hit hit : Hits) {
+            List<Hit> hits = result.getHits();
+            for (Hit hit : hits) {
                 user = user + "\r\n" + hit.getProperties().get("rep:principalName", String.class);
             }} catch (RepositoryException | LoginException e) {
-            LOG.info("Service User ERROR", e.getMessage());}
+            log.info("\n outside Getusername of service ");
+           }
         return user;
     }
 }

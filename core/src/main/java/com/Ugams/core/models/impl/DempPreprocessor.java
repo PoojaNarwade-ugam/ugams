@@ -28,7 +28,7 @@ public class DempPreprocessor implements Preprocessor {
     private ResourceResolverFactory resourceResolverFactory;
     @Reference
     DemoService currentTime;
-   String mypath="/content/ugams/us/en/demo/jcr:content/root/democomp";
+    String mypath="/content/ugams/us/en/demo/jcr:content/root/democomp";
 
     @Override
     public void preprocess(final ReplicationAction replicationAction,
@@ -45,14 +45,15 @@ public class DempPreprocessor implements Preprocessor {
 
             try{
                 log.debug("inside try");
-                ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory);
-                Session session = serviceResourceResolver.adaptTo(Session.class);
+                Session session;
+                Resource resource;
+                try (ResourceResolver serviceResourceResolver = ResolverUtils.newResolver(resourceResolverFactory)) {
+                    session = serviceResourceResolver.adaptTo(Session.class);
 
-                Resource resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/democomp");
+                    resource = serviceResourceResolver.getResource("/content/ugams/us/en/demo/jcr:content/root/democomp");
+                }
                 Node node = resource.adaptTo(Node.class);
 
-
-                //Calendar currentTime=DateUtil.parseISO8601(DateUtil.getISO8601Date(java.util.Calendar.getInstance()));
 
                 if (node.getProperty("Time") == DateUtil.parseISO8601(DateUtil.getISO8601Date(Calendar.getInstance()))) {
                     log.debug("Entered if");
@@ -69,7 +70,6 @@ public class DempPreprocessor implements Preprocessor {
                 e.printStackTrace();
 
             }
-
         }
 
         try {
