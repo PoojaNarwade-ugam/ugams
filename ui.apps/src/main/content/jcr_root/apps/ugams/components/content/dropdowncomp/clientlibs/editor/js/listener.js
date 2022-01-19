@@ -16,7 +16,7 @@
             let options = stateJSON[countryValue];
             let optionItems = stateField.items;
             optionItems.clear();
-            for (var i = 0; i < options.length; i++) {
+            for-of (var i = 0; i < options.length; i++) {
                 let obj = new Object();
                 let cnt = new Object();
                 obj["value"] = options[i].value;

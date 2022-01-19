@@ -1,6 +1,5 @@
 package com.Ugams.core.models.impl;
 
-import com.Ugams.core.models.Testimonial;
 import com.Ugams.core.models.TitleText;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
