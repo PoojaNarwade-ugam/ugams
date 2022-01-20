@@ -1,5 +1,7 @@
 package com.Ugams.core.models.impl;
+import com.Ugams.core.services.OSGiConfigApi;
 import com.Ugams.core.services.impl.ApiService;
+import org.apache.sling.models.annotations.injectorspecific.OSGiService;
 import org.json.JSONException;
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -14,17 +16,22 @@ import org.json.JSONObject;
 
 
 import com.Ugams.core.models.MultiApi;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Model(adaptables = Resource.class,
         adapters = MultiApi.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class MultiApiImpl implements MultiApi {
+    private static final Logger log = LoggerFactory.getLogger(MultiApiImpl.class);
     @Inject
     String page;
+    @OSGiService
+    OSGiConfigApi osGiConfigApi;
     @Override
     public List<Map<String, String>> getData() throws JSONException {
 
-        String resp = ApiService.readJson(getUrl());
+        String resp = ApiService.getJson(getUrl());
         JSONObject jsonObject =  new JSONObject(resp);
         JSONArray array = jsonObject.getJSONArray("data");
         List<Map<String, String>> userList = new ArrayList<>();
@@ -41,6 +48,8 @@ public class MultiApiImpl implements MultiApi {
 
     @Override
     public String getUrl() {
-        return "https://reqres.in/api/users?page="+page;
+        log.info(osGiConfigApi.getMultiUserApi());
+        return osGiConfigApi.getMultiUserApi()+page;
+
     }
 }
