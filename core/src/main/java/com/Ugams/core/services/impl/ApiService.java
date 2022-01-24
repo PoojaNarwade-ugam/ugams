@@ -2,7 +2,6 @@ package com.Ugams.core.services.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.IOException;

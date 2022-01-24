@@ -1,11 +1,7 @@
 package com.Ugams.core.config;
-
-import com.Ugams.core.services.impl.OSGiConfigApiImpl;
-import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.metatype.annotations.AttributeDefinition;
 import org.osgi.service.metatype.annotations.AttributeType;
 import org.osgi.service.metatype.annotations.ObjectClassDefinition;
-
 
 @ObjectClassDefinition(name = "API OSGi Config",
         description = "api osgi config")
