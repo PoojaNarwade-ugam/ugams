@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2021-06-22T15:33:25.342+05:30"
+        cq:lastModified="{Date}2022-01-24T19:19:21.294+05:30"
         cq:lastModifiedBy="admin"
         cq:policy="ugams/components/page/policy"
         jcr:primaryType="nt:unstructured"
@@ -18,7 +18,22 @@
             <responsivegrid
                 cq:policy="wcm/foundation/components/responsivegrid/policy_1738018341300"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="wcm/core/components/policies/mapping"/>
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <ugams jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <teaser
+                            cq:policy="ugams/components/teaser/policy_586679982237600"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                        <content jcr:primaryType="nt:unstructured">
+                            <extend-teaser
+                                cq:policy="ugams/components/content/extend-teaser/policy_1643032028509"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                    </components>
+                </ugams>
+            </responsivegrid>
         </root>
     </jcr:content>
 </jcr:root>
